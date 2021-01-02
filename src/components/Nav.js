@@ -6,8 +6,8 @@ export default function Nav() {
         <div className="
         fixed 
         top-0 
-        bg-teal-500
-        dark:bg-black 
+        bg-teal-2020
+        dark:bg-gray-2020
         w-full 
         p-5
         transition duration-450
