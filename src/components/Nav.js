@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/snowflake_logo_color.svg';
-import logo_gray from '../assets/snowflake_logo_gray.svg';
+/* import logo_gray from '../assets/snowflake_logo_gray.svg'; */
 import DarkModeButton from './DarkModeButton';
 
 export default function Nav() {
@@ -9,10 +9,8 @@ export default function Nav() {
         <div className="
         fixed
         top-0
-        bg-teal-2020
-        dark:bg-gray-2020
-        text-gray-2020
-        dark:text-teal-2020
+      bg-gray-2020
+      text-teal-2020
         w-full
         h-24
         p-5
