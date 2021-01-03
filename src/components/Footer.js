@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getFullYear, getFooterCopy } from '../utils/utils';
+import { getFullYear } from '../utils/utils';
 
 export default function Footer () {
     return (
@@ -15,8 +15,7 @@ export default function Footer () {
         grid
         grid-col-1
         ">
-          <p className="m-auto text-center">{`© Mighty Ducks 2020`}</p>
+          <p className="m-auto text-center">{`© Mighty Ducks ${getFullYear()}`}</p>
         </div>
     )
-    //Do we actually want the copyright year to update? ${getFullYear()}`}</p>
 }
