@@ -6,7 +6,7 @@ import DarkModeButton from './DarkModeButton';
 export default function Nav() {
 /*     const darkMode =  window.document.documentElement.classList.contains("dark"); */
     return (
-        <div className="
+        <nav className="
         fixed
         top-0
       bg-gray-2020
@@ -14,17 +14,13 @@ export default function Nav() {
         w-full
         h-24
         p-5
+        flex items-center
+        justify-between
         transition duration-450
-        grid
-        grid-cols-3
         ">
-          <div>
           <img src={logo} className="App-logo w-auto h-12 my-auto" alt="logo" />
-          </div>
-          <h1 className="m-auto text-3xl text-center">UnderReact</h1>
-          <div className="ml-auto my-auto">
-            <DarkModeButton />
-          </div>
-        </div>
+          <h1 className="m-auto text-3xl">UnderReact</h1>
+          <DarkModeButton />
+        </nav>
     )
 }
