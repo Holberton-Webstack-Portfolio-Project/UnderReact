@@ -9,7 +9,6 @@ export default function useDarkMode() {
 
         root.classList.remove(colorTheme);
         root.classList.add(theme);
-        // store user's latest preference to be re-used on page reload
         localStorage.setItem('theme', theme);
     }, [theme, colorTheme]);
 
