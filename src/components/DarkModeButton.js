@@ -9,7 +9,6 @@ export default function DarkModeButton() {
               w-10
               h-10
               dark:text-white
-              block
               rounded-full
               shadow-lg
               cursor-pointer
