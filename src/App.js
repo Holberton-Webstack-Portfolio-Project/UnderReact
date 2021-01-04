@@ -5,10 +5,13 @@ import Placeholder from './components/Placeholder';
 
 function App() {
   return (
-    <div className="App">
+    <div className="
+    min-h-screen
+    flex items-center
+    ">
       <Nav />
       <Body />
-      <Placeholder classes="w-96 h-48"/>
+{/*       <Placeholder classes="w-96 h-48"/> */}
       <Footer />
     </div>
   );
