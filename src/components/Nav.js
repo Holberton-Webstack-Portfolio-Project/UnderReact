@@ -9,8 +9,8 @@ export default function Nav() {
         <nav className="
         fixed
         top-0
-      bg-gray-2020
-      text-teal-2020
+        bg-r_black-2020
+        text-teal-2020
         w-full
         h-24
         p-5
