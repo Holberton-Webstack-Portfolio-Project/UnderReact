@@ -8,7 +8,7 @@ export default function Footer () {
         fixed
         bottom-0
         w-full p-5
-        bg-gray-2020
+        bg-r_black-2020
         text-white
         transition duration-450
         grid
