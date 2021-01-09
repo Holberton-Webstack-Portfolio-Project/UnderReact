@@ -126,55 +126,55 @@
 
 @keyframes blinkLeft {
     0% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
     49% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
     50% {
-        -webkit-transform: scaleY(15%);
+        -webkit-transform: scale(1, 0.15);
     }
     51% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
     100% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
 }
 
 @keyframes blinkRight {
     0% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
     51% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
     52% {
-        -webkit-transform: scaleY(15%);
+        -webkit-transform: scale(1, 0.15);
     }
     53% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
     100% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
 }
 
 @keyframes breathe {
     0% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
     25% {
-        -webkit-transform: scaleY(90%);
+        -webkit-transform: scale(1, 0.9);
     }
     50% {
-        -webkit-transform: scaleY(80%);
+        -webkit-transform: scale(1, 0.8);
     }
     75% {
-        -webkit-transform: scaleY(90%);
+        -webkit-transform: scale(1, 0.9);
     }
     100% {
-        -webkit-transform: scaleY(100%);
+        -webkit-transform: scale(1, 1);
     }
 }
 
@@ -191,7 +191,9 @@
 }
 
 .talk {
-    -webkit-animation: talk 2s linear 1.3s;
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-animation: talk 2s both linear 1.3s;
 }
 
 @keyframes bounceFeet {
@@ -232,36 +234,30 @@
 
 @keyframes talk {
     0% {
-        -webkit-transform: rotate(9deg) scaleX(100%) scaleY(100%);
+        -webkit-transform: rotate(0deg) scale(1, 1) translateZ(0);
     }
-    2% {
-        -webkit-transform: rotate(0deg) scaleX(105%) scaleY(80%);
+    21% {
+        -webkit-transform: rotate(9deg) scale(1, 0.3);
     }
-    9% {
-        -webkit-transform: rotate(-6deg) scaleX(95%) scaleY(100%);
+    29% {
+        -webkit-transform: rotate(-6deg) scale(0.95, 1);
     }
-    13% {
-        -webkit-transform: rotate(-3deg) scaleX(110%) scaleY(30%);
-    }
-    25% {
-        -webkit-transform: rotate(0deg) scaleX(100%) scaleY(100%);
+    35% {
+        -webkit-transform: rotate(0deg) scale(1, 1);
     }
     44% {
-        -webkit-transform: rotate(12deg) scaleX(100%) scaleY(50%);
+        -webkit-transform: rotate(12deg) scale(1, 0.5);
     }
     49% {
-        -webkit-transform: rotate(0deg) scaleX(90%) scaleY(100%);
+        -webkit-transform: rotate(0deg) scale(0.9, 1);
     }
     65% {
-        -webkit-transform: rotate(-5deg) scaleX(100%) scaleY(20%);
-    }
-    78% {
-        -webkit-transform: rotate(8deg) scaleX(90%) scaleY(110%);
+        -webkit-transform: rotate(-5deg) scale(1, 0.2);
     }
     84% {
-        -webkit-transform: rotate(-4deg) scaleX(100%) scaleY(100%);
+        -webkit-transform: rotate(-4deg) scale(1, 1);
     }
     100% {
-        -webkit-transform: rotate(0deg) scaleX(100%) scaleY(100%);
+        -webkit-transform: rotate(0deg) scale(1, 1);
     }
 }
