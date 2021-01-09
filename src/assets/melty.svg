@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsSe="http://svg-edit.googlecode.com" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnsDc="http://purl.org/dc/elements/1.1/" xmlnsCc="http://creativecommons.org/ns#" xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape" width="auto" height="auto" viewbox="-100 -100 200 200">
+    <title>melty 2.0</title>
+
+    <svg class="bounceFeet" x="-100" y="-50" viewbox="-100 -100 200 200">
+    <svg class="swayFeet" x="-100" y="-100" viewbox="-100 -100 200 200">
+        <path fill="#ffffff" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M-51.49999237060547,-0.13333046436309814 C-51.49999237060547,-22.067034423351288 -28.587278366088867,-39.83333081007004 -0.299981951713562,-39.83333081007004 C27.987276077270508,-39.83333081007004 50.89999008178711,-22.067034423351288 50.89999008178711,-0.13333046436309814 C50.89999008178711,21.80038958787918 27.987276077270508,39.56664019823074 -0.299981951713562,39.56664019823074 C-28.587278366088867,39.56664019823074 -51.49999237060547,21.80038958787918 -51.49999237060547,-0.13333046436309814 z" id="svg_1" class=""/>
+    </svg>
+    </svg>
+
+    <svg class="bounceBody" x="-100" y="-100" viewbox="-100 -100 200 200">
+    <svg class="swayBody" x="-100" y="-100" viewbox="-100 -100 200 200">
+        <svg x="-132" y="-110" viewbox="-100 -100 200 200">
+        <svg class="swayLeftArm" x="-100" y="-100" viewbox="-100 -100 200 200">
+            <path fill="#ffffff" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M0.6666393280029297,0.23335587978363037 L-44.133276641368866,-36.5666618347168 " id="svg_3" class=""/>
+        </svg>
+        </svg>
+        <svg x="-68" y="-110" viewbox="-100 -100 200 200">
+        <svg class="swayRightArm" x="-100" y="-100" viewbox="-100 -100 200 200">
+            <path fill="#ffffff" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M0.49991172552108765,0.23334062099456787 L39.69986218214035,-38.966678619384766 " id="svg_10" class=""/>
+        </svg>
+        </svg>
+        <path fill="#ffffff" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M-33.866703033447266,-1.099949300289154 C-33.866703033447266,-19.055752456188202 -18.87502670288086,-33.599970519542694 -0.3667469024658203,-33.599970519542694 C18.14153289794922,-33.599970519542694 33.133209228515625,-19.055752456188202 33.133209228515625,-1.099949300289154 C33.133209228515625,16.855851471424103 18.14153289794922,31.400069534778595 -0.3667469024658203,31.400069534778595 C-18.87502670288086,31.400069534778595 -33.866703033447266,16.855851471424103 -33.866703033447266,-1.099949300289154 z" id="svg_5" class=""/>
+    </svg>
+    </svg>
+
+    <svg class="bounceHead" x="-100" y="-145" viewbox="-100 -100 200 200">
+    <svg class="swayHead" x="-100" y="-100" viewbox="-100 -100 200 200">
+        <path fill="#ffffff" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M-22.20004653930664,-0.3666462302207947 C-22.20004653930664,-12.466142356395721 -12.22050666809082,-22.266689956188202 0.0999065637588501,-22.266689956188202 C12.420361518859863,-22.266689956188202 22.399913787841797,-12.466142356395721 22.399913787841797,-0.3666462302207947 C22.399913787841797,11.732785522937775 12.420361518859863,21.53336650133133 0.0999065637588501,21.53336650133133 C-12.22050666809082,21.53336650133133 -22.20004653930664,11.732785522937775 -22.20004653930664,-0.3666462302207947 z" id="svg_7" class=""/>
+        <svg class="breathe" x="-106" y="-91" viewbox="-100 -100 200 200">
+        <svg class="talk" x="-100" y="-100" viewbox="-100 -100 200 200">
+            <path fill="#fbc1c6" fill-opacity="1" stroke="#000000" stroke-opacity="1" style="color: rgb(0, 0, 0);" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" id="svg_8" d="M-10.933280944824219,21.74169796705246 L0.4095897674560547,-7.8083136677742 L11.752421379089355,21.74169796705246 z" class="" transform="rotate(-180, 0.40962, 6.96667)"/>
+        </svg>
+        </svg>
+        <svg x="-110" y="-103" viewbox="-100 -100 200 200">
+        <svg class="blinkLeft" x="-100" y="-100" viewbox="-100 -100 200 200">
+            <path fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M-6.000078856945038,0.33331888914108276 C-6.000078856945038,-3.1473307609558105 -3.1807109713554382,-5.966676235198975 0.2999478578567505,-5.966676235198975 C3.780612051486969,-5.966676235198975 6.5999258160591125,-3.1473307609558105 6.5999258160591125,0.33331888914108276 C6.5999258160591125,3.813995599746704 3.780612051486969,6.633329391479492 0.2999478578567505,6.633329391479492 C-3.1807109713554382,6.633329391479492 -6.000078856945038,3.813995599746704 -6.000078856945038,0.33331888914108276 z" class="" id="svg_6"/>
+        </svg>
+        </svg>
+        <svg x="-91" y="-109" viewbox="-100 -100 200 200">
+        <svg class="blinkRight" x="-100" y="-100" viewbox="-100 -100 200 200">
+            <path fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M-5.966752350330353,0.5999967455863953 C-5.966752350330353,-2.880661964416504 -3.1473787426948547,-5.7000041007995605 0.3332551121711731,-5.7000041007995605 C3.8139373660087585,-5.7000041007995605 6.633247077465057,-2.880661964416504 6.633247077465057,0.5999967455863953 C6.633247077465057,4.080659866333008 3.8139373660087585,6.899997234344482 0.3332551121711731,6.899997234344482 C-3.1473787426948547,6.899997234344482 -5.966752350330353,4.080659866333008 -5.966752350330353,0.5999967455863953 z" class="" id="svg_4"/>
+        </svg>
+        </svg>
+    </svg>
+    </svg>
+</svg>

@@ -8,6 +8,7 @@ function App() {
     <div className="
     min-h-screen
     flex items-center
+    dark:bg-r_gray-2020
     ">
       <Nav />
       <Body />
