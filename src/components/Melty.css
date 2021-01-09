@@ -1,267 +1,267 @@
 .swayFeet {
-    animation: swayFeet 4s infinite ease-out;
+    -webkit-animation: swayFeet 4s infinite ease-out;
 }
 
 .swayRightArm {
-    animation: swayRightArm 2.3s infinite ease-out;
+    -webkit-animation: swayRightArm 2.3s infinite ease-out;
 }
 
 .swayLeftArm {
-    animation: swayLeftArm 2s infinite ease-out;
+    -webkit-animation: swayLeftArm 2s infinite ease-out;
 }
 
 .swayBody {
-    animation: swayBody 4s infinite ease-out;
+    -webkit-animation: swayBody 4s infinite ease-out;
 }
 
 .swayHead {
-    animation: swayHead 4s infinite ease-out;
+    -webkit-animation: swayHead 4s infinite ease-out;
 }
 
 .blinkLeft {
-    animation: blinkLeft 5s infinite ease-out;
+    -webkit-animation: blinkLeft 5s infinite ease-out;
 }
 
 .blinkRight {
-    animation: blinkRight 5s infinite ease-out;
+    -webkit-animation: blinkRight 5s infinite ease-out;
 }
 
 .breathe {
-    animation: breathe 3s infinite ease-in-out;
+    -webkit-animation: breathe 3s infinite ease-in-out;
 }
 
 @keyframes swayFeet {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     25% {
-        transform: rotate(11deg);
+        -webkit-transform: rotate(11deg);
 
     }
     50% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     75% {
-        transform: rotate(-11deg);
+        -webkit-transform: rotate(-11deg);
     }
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 }
 
 @keyframes swayRightArm {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     25% {
-        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
 
     }
     50% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     75% {
-        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
     }
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 }
 
 @keyframes swayLeftArm {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     25% {
-        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
 
     }
     50% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     75% {
-        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
     }
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 }
 
 @keyframes swayBody {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     25% {
-        transform: rotate(15deg) translate(15px, -5px);
+        -webkit-transform: rotate(15deg) translate(15px, -5px);
 
     }
     50% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     75% {
-        transform: rotate(-15deg) translate(-15px, -5px);
+        -webkit-transform: rotate(-15deg) translate(-15px, -5px);
     }
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 }
 
 @keyframes swayHead {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     25% {
-        transform: rotate(15deg) translate(22px, -5px);
+        -webkit-transform: rotate(15deg) translate(22px, -5px);
     }
     50% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     75% {
-        transform: rotate(-15deg) translate(-22px, -5px);
+        -webkit-transform: rotate(-15deg) translate(-22px, -5px);
     }
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 }
 
 @keyframes blinkLeft {
     0% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
     49% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
     50% {
-        transform: scaleY(15%);
+        -webkit-transform: scaleY(15%);
     }
     51% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
     100% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
 }
 
 @keyframes blinkRight {
     0% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
     51% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
     52% {
-        transform: scaleY(15%);
+        -webkit-transform: scaleY(15%);
     }
     53% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
     100% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
 }
 
 @keyframes breathe {
     0% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
     25% {
-        transform: scaleY(90%);
+        -webkit-transform: scaleY(90%);
     }
     50% {
-        transform: scaleY(80%);
+        -webkit-transform: scaleY(80%);
     }
     75% {
-        transform: scaleY(90%);
+        -webkit-transform: scaleY(90%);
     }
     100% {
-        transform: scaleY(100%);
+        -webkit-transform: scaleY(100%);
     }
 }
 
 .bounceFeet {
-    animation: bounceFeet 0.5s ease-in-out 0.5s;
+    -webkit-animation: bounceFeet 0.5s ease-in-out 0.5s;
 }
 
 .bounceBody {
-    animation: bounceBody 0.5s ease-in-out 0.6s;
+    -webkit-animation: bounceBody 0.5s ease-in-out 0.6s;
 }
 
 .bounceHead {
-    animation: bounceHead 0.5s ease-in-out 0.7s;
+    -webkit-animation: bounceHead 0.5s ease-in-out 0.7s;
 }
 
 .talk {
-    animation: talk 2s linear 1.3s;
+    -webkit-animation: talk 2s linear 1.3s;
 }
 
 @keyframes bounceFeet {
     0% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
     }
     50% {
-        transform: translate(0px, -10px);
+        -webkit-transform: translate(0px, -10px);
     }
     100% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
     }
 }
 
 @keyframes bounceBody {
     0% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
     }
     50% {
-        transform: translate(0px, -18px);
+        -webkit-transform: translate(0px, -18px);
     }
     100% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
     }
 }
 
 @keyframes bounceHead {
     0% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
     }
     50% {
-        transform: translate(0px, -27px);
+        -webkit-transform: translate(0px, -27px);
     }
     100% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
     }
 }
 
 @keyframes talk {
     0% {
-        transform: rotate(9deg) scaleX(100%) scaleY(100%);
+        -webkit-transform: rotate(9deg) scaleX(100%) scaleY(100%);
     }
     2% {
-        transform: rotate(0deg) scaleX(105%) scaleY(80%);
+        -webkit-transform: rotate(0deg) scaleX(105%) scaleY(80%);
     }
     9% {
-        transform: rotate(-6deg) scaleX(95%) scaleY(100%);
+        -webkit-transform: rotate(-6deg) scaleX(95%) scaleY(100%);
     }
     13% {
-        transform: rotate(-3deg) scaleX(110%) scaleY(30%);
+        -webkit-transform: rotate(-3deg) scaleX(110%) scaleY(30%);
     }
     25% {
-        transform: rotate(0deg) scaleX(100%) scaleY(100%);
+        -webkit-transform: rotate(0deg) scaleX(100%) scaleY(100%);
     }
     44% {
-        transform: rotate(12deg) scaleX(100%) scaleY(50%);
+        -webkit-transform: rotate(12deg) scaleX(100%) scaleY(50%);
     }
     49% {
-        transform: rotate(0deg) scaleX(90%) scaleY(100%);
+        -webkit-transform: rotate(0deg) scaleX(90%) scaleY(100%);
     }
     65% {
-        transform: rotate(-5deg) scaleX(100%) scaleY(20%);
+        -webkit-transform: rotate(-5deg) scaleX(100%) scaleY(20%);
     }
     78% {
-        transform: rotate(8deg) scaleX(90%) scaleY(110%);
+        -webkit-transform: rotate(8deg) scaleX(90%) scaleY(110%);
     }
     84% {
-        transform: rotate(-4deg) scaleX(100%) scaleY(100%);
+        -webkit-transform: rotate(-4deg) scaleX(100%) scaleY(100%);
     }
     100% {
-        transform: rotate(0deg) scaleX(100%) scaleY(100%);
+        -webkit-transform: rotate(0deg) scaleX(100%) scaleY(100%);
     }
 }
