@@ -3,7 +3,7 @@ import Melty from './Melty.js';
 import { getTopic } from '../utils/utils';
 
 const topics = {};
-let current_topic = undefined;
+let current_content = undefined;
 
 function addTopic(topic_id) {
   if (topics[topic_id]) {
@@ -14,72 +14,70 @@ function addTopic(topic_id) {
   return topic
 }
 
-class Dropdown extends React.Component {
-    constructor(props) {
-      super(props);
-      const topic = addTopic(props.selection);
-      this.children = topic.children || [];
-      this.children.map(x => addTopic(x));
-      this.state = {children: this.children, next: undefined};
-      if (topic.content) {
-        current_topic = topic;
-      }
-      this.handleChange = this.handleChange.bind(this);
-    }
-
-    handleChange(e) {
-      console.log(e)
-      if (e.target.value !== 'default') {
-        console.log('settingState')
-        this.setState({next: e.target.value});
-        console.log(this.state)
-      } else {
-        this.setState({next: undefined});
-      }
-      e.preventDefault();
-    }
-
-    render() {
-      const menu = (
-        <select onChange={this.handleChange}>
-          <option key="0" selected value="default">Choose an option</option>
-          {this.state.children.map((x, ind) => {
-            return (<option key={ind + 1} value={x}>{topics[x].title}</option>);
-          })}
-        </select>
-      );
-      return (
-        <React.Fragment>
-            {(this.state.children.length !== 0) ? menu : ''}
-            {(this.state.next) ? <Dropdown selection={this.state.next} /> : ''}
-        </React.Fragment>
-      );
-    }
-}
-
 class DropdownWidget extends React.Component {
   constructor(props) {
     super(props);
-    this.firstTopic = addTopic('');
+    const topic = addTopic('');
+    this.children = topic.children || [];
+    this.children.map(x => addTopic(x));
+    this.state = {selections: [topic.id]};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.render = this.render.bind(this);
+  }
+
+  handleChange(e) {
+
+    const index = parseInt(e.target.attributes.id.nodeValue.substring(8));
+
+    this.setState((state, props) => {
+      const newList = [...state.selections].filter((x, ind) => ind <= index);
+      if (e.target.value !== 'default') {
+        const hasChildren = addTopic(e.target.value).children !== undefined;
+        if (hasChildren) {
+          newList.push(e.target.value);
+        }
+      }
+      return {selections: newList}
+    });
+
+    e.preventDefault();
   }
 
   render() {
+    const selections = this.state.selections;
+    const content = addTopic(selections[selections.length - 1]).content;
+    const menu = selections.map((selection, ind) => {
+      let children = addTopic(selection).children;
+      if (children === undefined) {
+        children = [];
+      }
+
+      return (
+        <select id={"dropdown"+ind.toString()} onChange={this.handleChange}>
+          <option key="0" selected value="default">Choose an option</option>
+          {children.map((x, ind) => {
+            return (<option key={ind + 1} value={x}>{addTopic(x).title}</option>);
+          })}
+        </select>);
+      });
     return (
       <React.Fragment>
-      <div>
-        <form>
-          <Dropdown selection={this.firstTopic.id} />
-        </form>
-      </div>
-      <div>
-        <Melty />
-      </div>
-      <div>
-        <p>{current_topic}</p>
-      </div>
+        <div>
+          <form>
+            {menu}
+          </form>
+        </div>
+        <div>
+          <Melty />
+        </div>
+        <div>
+          <p>{content}</p>
+        </div>
       </React.Fragment>
     );
   }
 }
+
 
 export default DropdownWidget
