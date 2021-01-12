@@ -1,0 +1,62 @@
+[
+    {
+        "id": "c6901afc-a645-4e37-9067-bdeba75b5ce3",
+        "title": "I would like to",
+        "children":
+        [
+            "f78cf090-d756-45e6-a9ca-d51776d58785",
+            "2f0b0409-618a-4ffe-b25c-951517edeb4b"
+        ]
+    },
+    {
+        "id": "f78cf090-d756-45e6-a9ca-d51776d58785",
+        "title": "start an app",
+        "content": "To start an app, do blahdy-blah."
+    },
+    {
+        "id": "2f0b0409-618a-4ffe-b25c-951517edeb4b",
+        "title": "modify an app",
+        "children":
+        [
+            "005c3971-dc52-40d8-9db2-32ff9896f969",
+            "469396ec-8cf8-4d20-a7dc-0fd6e51ba6b6",
+            "224995d5-6ead-4329-891e-f5e3aa355777"
+        ]
+    },
+    {
+        "id": "005c3971-dc52-40d8-9db2-32ff9896f969",
+        "title": "by including assets",
+        "content": "To include assets, do blahblabhabhbahbhahba."
+    },
+    {
+        "id": "469396ec-8cf8-4d20-a7dc-0fd6e51ba6b6",
+        "title": "by adding styling",
+        "content": "to add style with tailwind, do x."
+    },
+    {
+        "id": "224995d5-6ead-4329-891e-f5e3aa355777",
+        "title": "by adding a component",
+        "content": "components can be stateful or stateless, and can even be given other components as children to modify in some way",
+        "children":
+        [
+            "0a278688-7cd6-47b2-af89-987c3d7488e6",
+            "1cf8e4a1-356c-4c9b-960a-43b08de6dffc",
+            "62f8347d-39ac-4fa7-86ef-25d588c933e6"
+        ]
+    },
+    {
+        "id": "0a278688-7cd6-47b2-af89-987c3d7488e6",
+        "title": "with memory",
+        "content": "if you want memory, add a stateful component"
+    },
+    {
+        "id": "1cf8e4a1-356c-4c9b-960a-43b08de6dffc",
+        "title": "without memory",
+        "content": "if you want no memory, add a stateless component"
+    },
+    {
+        "id": "62f8347d-39ac-4fa7-86ef-25d588c933e6",
+        "title": "with other components",
+        "content": "if you want to contain other components, add a higher-order compositional component"
+    }
+]
