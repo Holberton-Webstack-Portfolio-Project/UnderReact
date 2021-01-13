@@ -1,9 +1,9 @@
 import React from 'react';
-import Melty from './Melty.js';
+import Melty from './Melty';
+import ContentPane from './ContentPane';
 import { getTopic } from '../utils/utils';
 
 const topics = {};
-let current_content = undefined;
 
 function addTopic(topic_id) {
   if (topics[topic_id]) {
@@ -18,9 +18,9 @@ class DropdownWidget extends React.Component {
   constructor(props) {
     super(props);
     const topic = addTopic('');
-    this.children = topic.children || [];
-    this.children.map(x => addTopic(x));
-    this.state = {selections: [topic.id]};
+    const children = topic.children || [];
+    children.map(x => addTopic(x));
+    this.state = {selections: [topic.id], content: addTopic(children[0]).content};
 
     this.handleChange = this.handleChange.bind(this);
     this.render = this.render.bind(this);
@@ -30,6 +30,12 @@ class DropdownWidget extends React.Component {
 
     const index = parseInt(e.target.attributes.id.nodeValue.substring(8));
 
+    let content = addTopic(e.target.value).content;
+    const children = addTopic(e.target.value).children;
+    if (!content && children) {
+      content = addTopic(children[0]).content
+    }
+
     this.setState((state, props) => {
       const newList = [...state.selections].filter((x, ind) => ind <= index);
       if (e.target.value !== 'default') {
@@ -38,7 +44,12 @@ class DropdownWidget extends React.Component {
           newList.push(e.target.value);
         }
       }
-      return {selections: newList}
+
+      let newCont = "Please make a selection to see info."
+      if (content) {
+        newCont = content
+      }
+      return {selections: newList, content: newCont}
     });
 
     e.preventDefault();
@@ -46,7 +57,7 @@ class DropdownWidget extends React.Component {
 
   render() {
     const selections = this.state.selections;
-    const content = addTopic(selections[selections.length - 1]).content;
+    const content = this.state.content;
     const menu = selections.map((selection, ind) => {
       let children = addTopic(selection).children;
       if (children === undefined) {
@@ -55,7 +66,6 @@ class DropdownWidget extends React.Component {
 
       return (
         <select id={"dropdown"+ind.toString()} onChange={this.handleChange}>
-          <option key="0" selected value="default">Choose an option</option>
           {children.map((x, ind) => {
             return (<option key={ind + 1} value={x}>{addTopic(x).title}</option>);
           })}
@@ -63,17 +73,15 @@ class DropdownWidget extends React.Component {
       });
     return (
       <React.Fragment>
-        <div>
-          <form>
-            {menu}
-          </form>
+        <div class="p-1 mb-6 lg:w-1/3 lg:mb-0 border-black border-2">
+          <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
+            <form>
+              {menu}
+            </form>
+          </div>
         </div>
-        <div>
-          <Melty />
-        </div>
-        <div>
-          <p>{content}</p>
-        </div>
+        <Melty />
+        <ContentPane content={content} />
       </React.Fragment>
     );
   }

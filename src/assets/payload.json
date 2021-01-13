@@ -36,7 +36,6 @@
     {
         "id": "224995d5-6ead-4329-891e-f5e3aa355777",
         "title": "by adding a component",
-        "content": "components can be stateful or stateless, and can even be given other components as children to modify in some way",
         "children":
         [
             "0a278688-7cd6-47b2-af89-987c3d7488e6",
