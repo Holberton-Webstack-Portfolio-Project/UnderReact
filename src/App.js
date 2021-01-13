@@ -11,8 +11,9 @@ function App() {
     dark:bg-r_gray-2020
     ">
       <Nav />
-      <Body />
-{/*       <Placeholder classes="w-96 h-48"/> */}
+      <div className="w-full px-12">
+        <Body />
+      </div>
       <Footer />
     </div>
   );
