@@ -22,6 +22,9 @@ module.exports = {
         },
         r_white: {
           2020: '#f7f7f7'
+        },
+        glow_green: {
+          2020: '#51ff0d'
         }
       },
     },
