@@ -74,7 +74,7 @@ class DropdownWidget extends React.Component {
     return (
       <div class="flex flex-wrap justify-center -m-3">
 
-        <div class="p-1 mb-6 lg:w-1/3 lg:mb-0 border-black border-2 h-80">
+        <div class="p-1 mb-6 lg:w-1/3 lg:mb-0 h-80">
           <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
             <h3 className="dark:text-white">I would like to:</h3>
             <form>
