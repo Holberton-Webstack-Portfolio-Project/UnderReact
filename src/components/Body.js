@@ -1,4 +1,3 @@
-import Melty from './Melty.js';
 import DropdownWidget from './DropdownWidget';
 
 export default function Body() {
