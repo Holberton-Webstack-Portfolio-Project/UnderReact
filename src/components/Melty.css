@@ -1,3 +1,12 @@
+.speechContainer {
+    position: relative;
+}
+
+.bubble {
+    -webkit-animation: bounceBubble 0.5s both ease-out 0.2s;
+}
+
+
 .swayFeet {
     -webkit-animation: swayFeet 4s infinite ease-out;
 }
@@ -193,7 +202,7 @@
 .talk {
     transform: translateZ(0);
     will-change: transform;
-    -webkit-animation: talk 2s both linear 1.3s;
+    -webkit-animation: talk 1.4s both linear 0.5s;
 }
 
 @keyframes bounceFeet {
@@ -259,5 +268,24 @@
     }
     100% {
         -webkit-transform: rotate(0deg) scale(1, 1);
+    }
+}
+
+
+@keyframes bounceBubble {
+    0% {
+        -webkit-transform: scale(1, 1);
+    }
+    30% {
+        -webkit-transform: scale(0.8, 1.2);
+    }
+    60% {
+        -webkit-transform: scale(1.1, 0.9);
+    }
+    80% {
+        -webkit-transform: scale(0.95, 1.05);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
     }
 }
