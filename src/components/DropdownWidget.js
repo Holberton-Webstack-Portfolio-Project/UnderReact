@@ -82,7 +82,7 @@ class DropdownWidget extends React.Component {
             </form>
           </div>
         </div>
-        <Melty />
+        <Melty text={content}/>
         <ContentPane content={content} />
       </div>
     );
