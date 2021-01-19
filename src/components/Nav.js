@@ -17,6 +17,7 @@ export default function Nav() {
         flex items-center
         justify-between
         transition duration-450
+        z-30
         ">
           <img src={logo} className="App-logo w-auto h-12 my-auto" alt="logo" />
           <h1 className="m-auto text-3xl">UnderReact</h1>

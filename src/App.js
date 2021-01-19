@@ -1,7 +1,6 @@
 import Body from './components/Body';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Placeholder from './components/Placeholder';
 
 function App() {
   return (
@@ -11,8 +10,9 @@ function App() {
     dark:bg-r_gray-2020
     ">
       <Nav />
-      <Body />
-{/*       <Placeholder classes="w-96 h-48"/> */}
+      <div className="w-full px-12">
+        <Body />
+      </div>
       <Footer />
     </div>
   );

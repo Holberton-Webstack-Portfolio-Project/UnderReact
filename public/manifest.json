@@ -9,6 +9,7 @@
     },
     {
       "src": "snowflake_color.png",
+      "sizes": "192x192 512x512",
       "type": "image/png"
     }
   ],
