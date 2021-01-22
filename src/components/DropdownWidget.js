@@ -65,17 +65,17 @@ class DropdownWidget extends React.Component {
       }
 
       return (
-        <select className="appearance-none p-2 m-2 rounded-lg w-60" id={"dropdown"+ind.toString()} onChange={this.handleChange}>
+        <select className="flex flex-col appearance-none p-2 m-2 rounded-lg w-full lg:w-56" id={"dropdown"+ind.toString()} onChange={this.handleChange}>
           {children.map((x, ind) => {
             return (<option key={ind + 1} value={x}>{addTopic(x).title}</option>);
           })}
         </select>);
       });
     return (
-      <div class="flex flex-wrap justify-center -m-3">
+      <div class="flex flex-col lg:flex-row flex-wrap justify-center m-1 border-black border-2">
 
-        <div class="p-1 mb-6 lg:w-1/3 lg:mb-0 h-80">
-          <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
+        <div class="p-1 mb-6 lg:w-1/3 lg:mb-0 h-80 border-black border-2">
+          <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded overflow-y-auto">
             <h3 className="dark:text-white">I would like to:</h3>
             <form>
               {menu}

@@ -3,9 +3,8 @@ import SyntaxPane from './SyntaxPane';
 
 export default function Body() {
   return (
-  <div class="container px-5 py-24 mt-20 mx-auto">
+  <div class="container px-5 py-24 mt-20 mx-auto border-black border-2">
       <DropdownWidget />
-      <SyntaxPane />
   </div>
   )
   }
