@@ -1,5 +1,4 @@
 import DropdownWidget from './DropdownWidget';
-import SyntaxPane from './SyntaxPane';
 
 export default function Body() {
   return (
