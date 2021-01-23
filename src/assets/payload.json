@@ -11,6 +11,7 @@
     {
         "id": "f78cf090-d756-45e6-a9ca-d51776d58785",
         "title": "start an app",
+        "melty_says": "Could you make me an air conditioning app?",
         "content": "To start an app, do blahdy-blah."
     },
     {
@@ -26,11 +27,13 @@
     {
         "id": "005c3971-dc52-40d8-9db2-32ff9896f969",
         "title": "by including assets",
+        "melty_says": "Speaking of assets, where'd my nose get off to?",
         "content": "To include assets, do blahblabhabhbahbhahba."
     },
     {
         "id": "469396ec-8cf8-4d20-a7dc-0fd6e51ba6b6",
         "title": "by adding styling",
+        "melty_says": "That reminds me, I'm missing a few buttons.",
         "content": "to add style with tailwind, do x."
     },
     {
@@ -46,16 +49,19 @@
     {
         "id": "0a278688-7cd6-47b2-af89-987c3d7488e6",
         "title": "with memory",
+        "melty_says": "I can recite pi to the 416th digit.",
         "content": "if you want memory, add a stateful component"
     },
     {
         "id": "1cf8e4a1-356c-4c9b-960a-43b08de6dffc",
         "title": "without memory",
+        "melty_says": "I feel like I've read this before...",
         "content": "if you want no memory, add a stateless component"
     },
     {
         "id": "62f8347d-39ac-4fa7-86ef-25d588c933e6",
         "title": "with other components",
+        "melty_says": "Think russian dolls.",
         "content": "if you want to contain other components, add a higher-order compositional component"
     }
 ]
