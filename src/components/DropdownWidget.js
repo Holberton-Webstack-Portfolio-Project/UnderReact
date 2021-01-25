@@ -20,20 +20,22 @@ class DropdownWidget extends React.Component {
     const topic = addTopic('');
     const children = topic.children || [];
     children.map(x => addTopic(x));
-    this.state = {selections: [topic.id], content: addTopic(children[0]).content};
+    this.state = {selections: [topic.id], content: addTopic(children[0]).content, meltySays: "Choose a series of topics to see information about how to do stuff."};
 
     this.handleChange = this.handleChange.bind(this);
     this.render = this.render.bind(this);
   }
 
-  handleChange(e) {
-
-    const index = parseInt(e.target.attributes.id.nodeValue.substring(8));
+  handleChange(e, index) {
 
     let content = addTopic(e.target.value).content;
+    let melty_says = addTopic(e.target.value).melty_says;
     const children = addTopic(e.target.value).children;
     if (!content && children) {
       content = addTopic(children[0]).content
+    }
+    if (!melty_says && children) {
+      melty_says = addTopic(children[0]).melty_says
     }
 
     this.setState((state, props) => {
@@ -49,7 +51,7 @@ class DropdownWidget extends React.Component {
       if (content) {
         newCont = content
       }
-      return {selections: newList, content: newCont}
+      return {selections: newList, content: newCont, meltySays: melty_says}
     });
 
     e.preventDefault();
@@ -58,6 +60,7 @@ class DropdownWidget extends React.Component {
   render() {
     const selections = this.state.selections;
     const content = this.state.content;
+    const meltySays = this.state.meltySays;
     const menu = selections.map((selection, ind) => {
       let children = addTopic(selection).children;
       if (children === undefined) {
@@ -65,24 +68,24 @@ class DropdownWidget extends React.Component {
       }
 
       return (
-        <select className="appearance-none p-2 m-2 rounded-lg w-60" id={"dropdown"+ind.toString()} onChange={this.handleChange}>
+        <select key={ind + 1} className="flex flex-col appearance-none p-2 m-2 rounded-lg w-full lg:w-56" onChange={(x) => this.handleChange(x, ind)}>
           {children.map((x, ind) => {
             return (<option key={ind + 1} value={x}>{addTopic(x).title}</option>);
           })}
         </select>);
       });
     return (
-      <div class="flex flex-wrap justify-center -m-3">
+      <div className="flex flex-col lg:flex-row flex-wrap justify-center m-1">
 
-        <div class="p-1 mb-6 lg:w-1/3 lg:mb-0 h-80">
-          <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
-            <h3 className="dark:text-white">I would like to:</h3>
+        <div className="p-1 mb-6 lg:w-1/3 lg:mb-0 h-80">
+          <div className="h-full bg-gray-800 bg-opacity-40 p-8 rounded overflow-y-auto">
+            <h2 className="dark:text-white">I would like to:</h2>
             <form>
               {menu}
             </form>
           </div>
         </div>
-        <Melty text={content}/>
+        <Melty text={meltySays}/>
         <ContentPane content={content} />
       </div>
     );
