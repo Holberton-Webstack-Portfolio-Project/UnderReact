@@ -12,7 +12,9 @@
         "id": "f78cf090-d756-45e6-a9ca-d51776d58785",
         "title": "start an app",
         "melty_says": "Could you make me an air conditioning app?",
-        "content": "To start an app, do blahdy-blah."
+        "content": ["There are several ways to start a new react app. The simplest of these is the create-react-app tool. To use create-react-app to start a new react app, simply run",
+            "npx create-react-app my-app\ncd my-app\nnpm start",
+            "in the command line (with the name of the app you wish to create in place of 'my-app')."]
     },
     {
         "id": "2f0b0409-618a-4ffe-b25c-951517edeb4b",
@@ -28,13 +30,36 @@
         "id": "005c3971-dc52-40d8-9db2-32ff9896f969",
         "title": "by including assets",
         "melty_says": "Speaking of assets, where'd my nose get off to?",
-        "content": "To include assets, do blahblabhabhbahbhahba."
+        "content": ["Assuming that your project makes use of webpack (which it should if you used create-react-app to start the project), you can simply import the assets into the file you need to use them in by using a path to the asset relative to the current js file. This works for most image types as well as css. A few examples are below:",
+            "import logo from '../assets/snowflake_logo_color.svg';",
+            "",
+            "import './Melty.css';",
+            "For svg images, you can also import them directly as ReactComponents. An example of this is the code for Melty the Snowman below:",
+            "import React from 'react';\nimport MeltySpeech from './MeltySpeech';\nimport { ReactComponent as MeltyIcon } from '../assets/melty.svg';\nimport './Melty.css';\n\nexport default function Melty (props) {\n  return (\n    <div className=\"mb-4 w-auto lg:mb-0 flex flex-col items-center h-128 w-96\">\n      <MeltySpeech text={props.text}/>\n      <div className=\"h-32 w-52\">\n        <MeltyIcon />\n      </div>\n    </div>\n  )\n}"]
     },
     {
         "id": "469396ec-8cf8-4d20-a7dc-0fd6e51ba6b6",
         "title": "by adding styling",
         "melty_says": "That reminds me, I'm missing a few buttons.",
-        "content": "to add style with tailwind, do x."
+        "content": ["To add styling using TailwindCSS, first follow the installation instructions found here:", "", "https://tailwindcss.com/docs/guides/create-react-app",
+            "",
+            "TailwindCSS works by adding predefined css classes to elements to define how they should appear. If you've ever worked with Bootstrap before, this style of styling should feel familiar to you.",
+            "",
+            "You can find the official documentation for TailwindCSS here:",
+            "",
+            "https://tailwindcss.com/docs",
+            "",
+            "And you can find a handy TailwindCSS class cheatsheet here:",
+            "",
+            "https://nerdcave.com/tailwind-cheat-sheet",
+            "",
+            "Below are some examples of styling used in this application.",
+            "<nav className=\"fixed top-0 bg-r_black-2020 text-teal-2020 w-full h-24 p-5 flex items-center justify-between transition duration-450 z-30\">",
+            "",
+            "<img src={logo} className=\"App-logo w-auto h-12 my-auto\" alt=\"logo\" />",
+            "",
+            "<h1 className=\"m-auto text-3xl\">UnderReact</h1>"
+        ]
     },
     {
         "id": "224995d5-6ead-4329-891e-f5e3aa355777",
@@ -42,26 +67,34 @@
         "children":
         [
             "0a278688-7cd6-47b2-af89-987c3d7488e6",
-            "1cf8e4a1-356c-4c9b-960a-43b08de6dffc",
-            "62f8347d-39ac-4fa7-86ef-25d588c933e6"
+            "1cf8e4a1-356c-4c9b-960a-43b08de6dffc"
         ]
     },
     {
         "id": "0a278688-7cd6-47b2-af89-987c3d7488e6",
         "title": "with memory",
         "melty_says": "I can recite pi to the 416th digit.",
-        "content": "if you want memory, add a stateful component"
+        "content": [ "Components in react can either be stateful or stateless, and they can also be function components or class components. In the case of stateful function components, however, it is necessary to use react hooks, so it is often more natural to use class components when they are stateful.",
+            "",
+
+            "A stateful component can change based on the props passed into it, or based on it's own internal state, and because of this it can have internal logic to change internal state based on arbitrary conditions.",
+            "",
+            "Here's an example of a stateful function component used in this project.",
+            "import React from 'react';\r\nimport useDarkMode from '..\/hooks\/useDarkMode';\r\n\r\nexport default function DarkModeButton() {\r\n    const [colorTheme, setTheme] = useDarkMode();\r\n    return (\r\n         <span onClick={() => setTheme(colorTheme)} \r\n              className=\"\r\n              w-10\r\n              h-10\r\n              dark:text-white\r\n              rounded-full\r\n              shadow-lg\r\n              cursor-pointer\r\n              flex items-center justify-center\r\n              \">\r\n              {colorTheme === 'light'?\r\n              (\r\n                  <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z\"><\/path><\/svg>\r\n              ) :\r\n              ( <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z\"><\/path><\/svg>\r\n          )}\r\n          <\/span>\r\n    )\r\n}\r\n",
+            "And here's an example of a stateful class component used in this project.",
+            "import React from 'react';\r\nimport Melty from '.\/Melty';\r\nimport ContentPane from '.\/ContentPane';\r\nimport { getTopic } from '..\/utils\/utils';\r\n\r\nconst topics = {};\r\n\r\nfunction addTopic(topic_id) {\r\n  if (topics[topic_id]) {\r\n    return topics[topic_id];\r\n  }\r\n  const topic = getTopic(topic_id);\r\n  topics[topic.id] = topic;\r\n  return topic\r\n}\r\n\r\nclass DropdownWidget extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    const topic = addTopic('');\r\n    const children = topic.children || [];\r\n    children.map(x => addTopic(x));\r\n    this.state = {selections: [topic.id], content: addTopic(children[0]).content, meltySays: \"Choose a series of topics to see information about how to do stuff.\"};\r\n\r\n    this.handleChange = this.handleChange.bind(this);\r\n    this.render = this.render.bind(this);\r\n  }\r\n\r\n  handleChange(e, index) {\r\n\r\n    let content = addTopic(e.target.value).content;\r\n    let melty_says = addTopic(e.target.value).melty_says;\r\n    const children = addTopic(e.target.value).children;\r\n    if (!content && children) {\r\n      content = addTopic(children[0]).content\r\n    }\r\n    if (!melty_says && children) {\r\n      melty_says = addTopic(children[0]).melty_says\r\n    }\r\n\r\n    this.setState((state, props) => {\r\n      const newList = [...state.selections].filter((x, ind) => ind <= index);\r\n      if (e.target.value !== 'default') {\r\n        const hasChildren = addTopic(e.target.value).children !== undefined;\r\n        if (hasChildren) {\r\n          newList.push(e.target.value);\r\n        }\r\n      }\r\n\r\n      let newCont = \"Please make a selection to see info.\"\r\n      if (content) {\r\n        newCont = content\r\n      }\r\n      return {selections: newList, content: newCont, meltySays: melty_says}\r\n    });\r\n\r\n    e.preventDefault();\r\n  }\r\n\r\n  render() {\r\n    const selections = this.state.selections;\r\n    const content = this.state.content;\r\n    const meltySays = this.state.meltySays;\r\n    const menu = selections.map((selection, ind) => {\r\n      let children = addTopic(selection).children;\r\n      if (children === undefined) {\r\n        children = [];\r\n      }\r\n\r\n      return (\r\n        <select key={ind + 1} className=\"flex flex-col appearance-none p-2 m-2 rounded-lg w-full lg:w-56\" onChange={(x) => this.handleChange(x, ind)}>\r\n          {children.map((x, ind) => {\r\n            return (<option key={ind + 1} value={x}>{addTopic(x).title}<\/option>);\r\n          })}\r\n        <\/select>);\r\n      });\r\n    return (\r\n      <div className=\"flex flex-col lg:flex-row flex-wrap justify-center m-1\">\r\n\r\n        <div className=\"p-1 mb-6 lg:w-1\/3 lg:mb-0 h-80\">\r\n          <div className=\"h-full bg-gray-800 bg-opacity-40 p-8 rounded overflow-y-auto\">\r\n            <h3 className=\"dark:text-white\">I would like to:<\/h3>\r\n            <form>\r\n              {menu}\r\n            <\/form>\r\n          <\/div>\r\n        <\/div>\r\n        <Melty text={meltySays}\/>\r\n        <ContentPane content={content} \/>\r\n      <\/div>\r\n    );\r\n  }\r\n}\r\n\r\nexport default DropdownWidget;" ]
     },
     {
         "id": "1cf8e4a1-356c-4c9b-960a-43b08de6dffc",
         "title": "without memory",
         "melty_says": "I feel like I've read this before...",
-        "content": "if you want no memory, add a stateless component"
-    },
-    {
-        "id": "62f8347d-39ac-4fa7-86ef-25d588c933e6",
-        "title": "with other components",
-        "melty_says": "Think russian dolls.",
-        "content": "if you want to contain other components, add a higher-order compositional component"
+        "content": [ "Components in react can either be stateful or stateless, and they can also be function components or class components.",
+            "",
+            "A stateless component can change based only on the props passed into it, and holds no internal state of it's own.",
+            "",
+            "Here's an example of a stateless function component used in this project.",
+            "import React from 'react';\r\nimport {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';\r\nimport {materialDark} from 'react-syntax-highlighter\/dist\/esm\/styles\/prism';\r\nimport {materialLight} from 'react-syntax-highlighter\/dist\/esm\/styles\/prism';\r\n\r\nexport default function SyntaxPane(props) {\r\n  return (\r\n    <SyntaxHighlighter\r\n      language=\"jsx\"\r\n      style={materialDark}\r\n      children={props.content}\r\n      lineProps={{style: {paddingBottom: 0}}}\r\n      wrapLongLines={true}\r\n    \/>\r\n  );\r\n}\r\n",
+            "And here's an example of a stateless class component used in this project.",
+            "import React from 'react';\r\nimport SyntaxPane from '.\/SyntaxPane';\r\n\r\nclass ContentPane extends React.Component {\r\n\r\n  constructor(props) {\r\n    super(props);\r\n\r\n    this.render = this.render.bind(this);\r\n  }\r\n\r\n  render() {\r\n    const content = this.props.content.map((x, ind) => {\r\n      if (x === \"\") {\r\n        return (\"\");\r\n      }\r\n      if (x.indexOf && (x.indexOf('http') === 0)) {\r\n        return (\r\n          <React.Fragment>\r\n            <p>\r\n              <a className=\"underline dark:text-teal-2020 text-gray-2020\" href={x}>{x}<\/a>\r\n            <\/p>\r\n            <br\/>\r\n          <\/React.Fragment>\r\n        );\r\n      }\r\n      if (ind % 2 === 0) {\r\n        return (\r\n          <React.Fragment>\r\n            <p className=\"dark:text-white\">{x}<\/p>\r\n            <br\/>\r\n          <\/React.Fragment>\r\n        );\r\n      }\r\n      return (\r\n        <React.Fragment>\r\n          <SyntaxPane content={x} \/>\r\n          <br\/>\r\n        <\/React.Fragment>\r\n      );\r\n    });\r\n\r\n    return (\r\n      <div class=\"p-1 mb-0 lg:w-1\/3 lg:h-80\">\r\n        <div class=\"h-full bg-gray-800 bg-opacity-40 p-8 rounded lg:overflow-y-auto\">\r\n          {content}\r\n        <\/div>\r\n      <\/div>\r\n    );\r\n  }\r\n}\r\n\r\nexport default ContentPane;\r\n" ]
     }
 ]
