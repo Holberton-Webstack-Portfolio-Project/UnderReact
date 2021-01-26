@@ -1,7 +1,7 @@
 import React from 'react';
 import MeltySpeech from './MeltySpeech';
 import { ReactComponent as MeltyIcon } from '../assets/melty.svg';
-import './Melty.css';
+import '../styles/Melty.css';
 
 export default function Melty (props) {
     return (
