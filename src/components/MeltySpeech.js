@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { ReactComponent as MeltyBubble } from '../assets/melty_speech.svg';
-import './Melty.css';
-
-
+import '../styles/Melty.css';
 
 class MeltySpeech extends React.Component{
 

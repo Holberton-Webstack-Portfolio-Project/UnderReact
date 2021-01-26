@@ -1,10 +1,8 @@
 import React from 'react';
 import logo from '../assets/snowflake_logo_color.svg';
-/* import logo_gray from '../assets/snowflake_logo_gray.svg'; */
 import DarkModeButton from './DarkModeButton';
 
 export default function Nav() {
-/*     const darkMode =  window.document.documentElement.classList.contains("dark"); */
     return (
         <nav className="
         fixed
