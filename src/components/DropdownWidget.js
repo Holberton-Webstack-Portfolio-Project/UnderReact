@@ -68,7 +68,7 @@ class DropdownWidget extends React.Component {
       }
 
       return (
-        <select id="dropdown-bar" key={ind + 1} className="flex flex-col appearance-none p-2 m-2 mx-auto rounded-lg w-full lg:w-56" onChange={(x) => this.handleChange(x, ind)}>
+        <select id="dropdown-bar" key={ind + 1} className="flex flex-col appearance-none p-2 m-2 mx-auto rounded-lg w-full lg:w-56 border-gray-2020 border-2" onChange={(x) => this.handleChange(x, ind)}>
           {children.map((x, ind) => {
             return (<option key={ind + 1} value={x}>{addTopic(x).title}</option>);
           })}
