@@ -41,7 +41,7 @@ class ContentPane extends React.Component {
     });
 
     return (
-      <div class="p-1 mb-0 lg:w-1/3 lg:h-80">
+      <div class="p-1 mb-0 w-full lg:w-1/3 lg:h-80">
         <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded lg:overflow-y-auto">
           {content}
         </div>
