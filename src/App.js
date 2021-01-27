@@ -10,7 +10,7 @@ function App() {
     dark:bg-r_gray-2020
     ">
       <Nav />
-      <div className="w-full px-12">
+      <div className="w-full px-4 md:px-12">
         <Body />
       </div>
       <Footer />
