@@ -1,12 +1,12 @@
 // craco.config.js
 const CracoAntDesignPlugin = require("craco-antd");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+//const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   webpack: {
     plugins: [
-      new BundleAnalyzerPlugin(),
+      //new BundleAnalyzerPlugin(),
       new CompressionWebpackPlugin({
         filename: '[path].gz[query]',
         algorithm: 'gzip',
