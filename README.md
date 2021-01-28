@@ -6,9 +6,9 @@
 
 A fast way to find the React essentials you need without digging through docs.
 
-Utilizing an statement-based decision tree structure to find topics.
+Utilizing a statement-based decision tree structure to find topics.
 
-Providing real-world code examples, including from the app’s own codebase.
+Providing real-world code examples, including from the app’s own codebase!
 
 ## Installation
 
@@ -24,13 +24,13 @@ Install with **npm**:
 $ npm install
 ```
 
-Start the app for development:
+Start the app for development (by default at localhost:3000):
 
 ```bash
 $ npm start
 ```
 
-Or build the app for production, enjoying the benefits of the included build optimization:
+Build the app for production (enjoying the benefits of the included build optimization):
 
 ```bash
 $ npm run build
