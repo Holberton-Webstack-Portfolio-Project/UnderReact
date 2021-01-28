@@ -9,13 +9,16 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "^9.8.6",
+    "brotli-webpack-plugin": "^1.1.0",
+    "craco-antd": "^1.19.0",
     "postcss": "^7.0.35",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "react-syntax-highlighter": "^15.4.3",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "webpack-bundle-analyzer": "^4.4.0"
   },
   "scripts": {
     "start": "craco start",
@@ -40,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^6.0.5"
   }
 }
