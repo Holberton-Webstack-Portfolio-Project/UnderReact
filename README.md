@@ -10,7 +10,7 @@ Utilizing a statement-based decision tree structure to find topics.
 
 Providing real-world code examples, including from the app’s own codebase!
 
-## Example of final product:
+## Example:
 
 <img src="./public/preview.gif" width="640" height=auto /> 
 
