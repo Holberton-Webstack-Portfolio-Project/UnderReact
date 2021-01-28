@@ -41,3 +41,8 @@ $ npm run build
 ```
 
 See a live deploy of the site right now at [underreact.click](https://www.underreact.click)!
+
+## Authors
+
+* William Dyrland-Marquis, [@maybe-william](https://github.com/maybe-william)
+* Gareth Brickman, [@garethbrickman](https://github.com/garethbrickman)
