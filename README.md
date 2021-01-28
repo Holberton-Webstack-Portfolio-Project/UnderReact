@@ -1,6 +1,6 @@
-<img src="./public/snowflake_color.png" width="80" height=auto /> 
+# <img src="./public/snowflake_color.png" width="80" height=auto /> UnderReact
 
-# UnderReact
+<img src="./public/preview.gif" width="640" height=auto /> 
 
 ## Description
 
