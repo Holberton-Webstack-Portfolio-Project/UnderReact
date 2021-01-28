@@ -2,6 +2,7 @@
 const CracoAntDesignPlugin = require("craco-antd");
 //const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 
 module.exports = {
   webpack: {
@@ -16,6 +17,12 @@ module.exports = {
           ')$'
         ),
         threshold: 1024,
+        minRatio: 0.8
+      }),
+      new BrotliPlugin({
+        asset: '[path].br[query]',
+        test: /\.(js|css|html|svg)$/,
+        threshold: 10240,
         minRatio: 0.8
       }),
     ]
