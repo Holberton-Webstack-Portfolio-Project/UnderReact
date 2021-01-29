@@ -3,9 +3,13 @@ import Melty from './Melty';
 import ContentPane from './ContentPane';
 import { getTopic } from '../utils/utils';
 
+/** a local cache of topic objects */
 const topics = {};
 
-function addTopic(topic_id) {
+/**
+ * Fetches a topic if not in the local cache, puts it in the cache, and returns it.
+ */
+function fetchTopic(topic_id) {
   if (topics[topic_id]) {
     return topics[topic_id];
   }
@@ -22,10 +26,10 @@ function addTopic(topic_id) {
 class DropdownWidget extends React.Component {
   constructor(props) {
     super(props);
-    const topic = addTopic('');
+    const topic = fetchTopic('');
     const children = topic.children || [];
-    children.map(x => addTopic(x));
-    this.state = {selections: [topic.id], content: addTopic(children[0]).content, meltySays: "Choose a series of topics to see information about how to do stuff."};
+    children.map(x => fetchTopic(x));
+    this.state = {selections: [topic.id], content: fetchTopic(children[0]).content, meltySays: "Choose a series of topics to see information about how to do stuff."};
 
     this.handleChange = this.handleChange.bind(this);
     this.render = this.render.bind(this);
@@ -33,20 +37,20 @@ class DropdownWidget extends React.Component {
 
   handleChange(e, index) {
 
-    let content = addTopic(e.target.value).content;
-    let melty_says = addTopic(e.target.value).melty_says;
-    const children = addTopic(e.target.value).children;
+    let content = fetchTopic(e.target.value).content;
+    let melty_says = fetchTopic(e.target.value).melty_says;
+    const children = fetchTopic(e.target.value).children;
     if (!content && children) {
-      content = addTopic(children[0]).content
+      content = fetchTopic(children[0]).content
     }
     if (!melty_says && children) {
-      melty_says = addTopic(children[0]).melty_says
+      melty_says = fetchTopic(children[0]).melty_says
     }
 
     this.setState((state, props) => {
       const newList = [...state.selections].filter((x, ind) => ind <= index);
       if (e.target.value !== 'default') {
-        const hasChildren = addTopic(e.target.value).children !== undefined;
+        const hasChildren = fetchTopic(e.target.value).children !== undefined;
         if (hasChildren) {
           newList.push(e.target.value);
         }
@@ -67,7 +71,7 @@ class DropdownWidget extends React.Component {
     const content = this.state.content;
     const meltySays = this.state.meltySays;
     const menu = selections.map((selection, ind) => {
-      let children = addTopic(selection).children;
+      let children = fetchTopic(selection).children;
       if (children === undefined) {
         children = [];
       }
@@ -75,7 +79,7 @@ class DropdownWidget extends React.Component {
       return (
         <select id="dropdown-bar" key={ind + 1} className="flex flex-col appearance-none p-2 m-2 mx-auto rounded-lg w-full lg:w-56 border-gray-2020 border-2" onChange={(x) => this.handleChange(x, ind)}>
           {children.map((x, ind) => {
-            return (<option key={ind + 1} value={x}>{addTopic(x).title}</option>);
+            return (<option key={ind + 1} value={x}>{fetchTopic(x).title}</option>);
           })}
         </select>);
       });
@@ -98,6 +102,5 @@ class DropdownWidget extends React.Component {
     );
   }
 }
-
 
 export default DropdownWidget
