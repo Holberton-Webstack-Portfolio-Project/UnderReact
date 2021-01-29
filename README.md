@@ -8,7 +8,9 @@ A fast way to find the React essentials you need without digging through docs.
 
 Utilizing a statement-based decision tree structure to find topics.
 
-Providing real-world code examples, including from the app’s own codebase!
+Providing real-world code examples, including from the app’s own codebase.
+
+See a live deploy of the site right now at [underreact.click](https://www.underreact.click)!
 
 ## Example:
 
@@ -28,6 +30,8 @@ Install with **npm**:
 $ npm install
 ```
 
+## Usage
+
 Start the app for development (by default at localhost:3000):
 
 ```bash
@@ -40,9 +44,17 @@ Build the app for production (enjoying the benefits of the included build optimi
 $ npm run build
 ```
 
-See a live deploy of the site right now at [underreact.click](https://www.underreact.click)!
+## Project Planning
+
+Github Projects
+
+<img src="./public/preview.gif" width="640" height=auto /> 
 
 ## Authors
 
-* William Dyrland-Marquis, [@maybe-william](https://github.com/maybe-william)
-* Gareth Brickman, [@garethbrickman](https://github.com/garethbrickman)
+* William Dyrland-Marquis [@maybe-william](https://github.com/maybe-william) [LinkedIn] (https://www.linkedin.com/in/william-dyrland-marquis/)
+* Gareth Brickman [@garethbrickman](https://github.com/garethbrickman) [LinkedIn] (https://www.linkedin.com/in/br1ck/)
+
+## Licensing
+
+
