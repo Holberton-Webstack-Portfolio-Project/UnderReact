@@ -57,4 +57,4 @@ $ npm run build
 
 ## Licensing
 
-
+Mozilla Public License Version 2.0
