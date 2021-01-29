@@ -46,7 +46,7 @@ $ npm run build
 
 ## Project Planning
 
-Github Projects
+[Github Projects](https://github.com/orgs/Holberton-Webstack-Portfolio-Project/projects/1)
 
 <img src="./public/kanban.png" width="640" height=auto /> 
 
