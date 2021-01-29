@@ -48,12 +48,12 @@ $ npm run build
 
 Github Projects
 
-<img src="./public/preview.gif" width="640" height=auto /> 
+<img src="./public/kanban.png" width="640" height=auto /> 
 
 ## Authors
 
-* William Dyrland-Marquis [@maybe-william](https://github.com/maybe-william) [LinkedIn] (https://www.linkedin.com/in/william-dyrland-marquis/)
-* Gareth Brickman [@garethbrickman](https://github.com/garethbrickman) [LinkedIn] (https://www.linkedin.com/in/br1ck/)
+* William Dyrland-Marquis [@maybe-william](https://github.com/maybe-william) | [LinkedIn](https://www.linkedin.com/in/william-dyrland-marquis/)
+* Gareth Brickman [@garethbrickman](https://github.com/garethbrickman) | [LinkedIn](https://www.linkedin.com/in/br1ck/)
 
 ## Licensing
 
