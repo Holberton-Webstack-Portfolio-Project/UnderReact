@@ -1,6 +1,9 @@
 import React from 'react';
 import SyntaxPane from './SyntaxPane';
 
+/**
+ * A content pane containing text, links, or code
+ */
 class ContentPane extends React.Component {
 
   constructor(props) {

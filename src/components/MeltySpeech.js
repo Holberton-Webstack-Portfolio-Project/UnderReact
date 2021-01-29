@@ -2,6 +2,9 @@ import React from 'react';
 import { ReactComponent as MeltyBubble } from '../assets/melty_speech.svg';
 import '../styles/Melty.css';
 
+/**
+ * A speech bubble that bounces when new text is given to be displayed.
+ */
 class MeltySpeech extends React.Component{
 
     constructor(props) {

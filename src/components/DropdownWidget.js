@@ -14,6 +14,11 @@ function addTopic(topic_id) {
   return topic
 }
 
+/**
+ * A dynamically changing decision tree in the form of a list of dropdowns.
+ * The content generated as a result of decisions chosen is passed into the
+ * ContentPane and Melty children in the render method.
+ */
 class DropdownWidget extends React.Component {
   constructor(props) {
     super(props);

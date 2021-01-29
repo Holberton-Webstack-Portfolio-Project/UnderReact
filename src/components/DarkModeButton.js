@@ -1,6 +1,9 @@
 import React from 'react';
 import useDarkMode from '../hooks/useDarkMode';
 
+/**
+ * A button to toggle dark mode
+ */
 export default function DarkModeButton() {
     const [colorTheme, setTheme] = useDarkMode();
     return (

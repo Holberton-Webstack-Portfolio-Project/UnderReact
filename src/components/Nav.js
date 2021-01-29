@@ -2,6 +2,9 @@ import React from 'react';
 import logo from '../assets/snowflake_logo_color.svg';
 import DarkModeButton from './DarkModeButton';
 
+/**
+ * The Navigation bar section of the app
+ */
 export default function Nav() {
     return (
         <nav className="

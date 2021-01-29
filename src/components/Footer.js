@@ -1,7 +1,9 @@
 import React from 'react';
-
 import { getFullYear } from '../utils/utils';
 
+/*
+ * The Footer section of the app
+ */
 export default function Footer () {
     return (
         <div className="
