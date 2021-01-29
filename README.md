@@ -41,7 +41,7 @@ $ npm start
 Build the app for production (enjoying the benefits of the included build optimization):
 
 ```bash
-$ npm run build
+$ npm build
 ```
 
 ## Project Planning
