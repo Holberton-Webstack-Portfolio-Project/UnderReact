@@ -1,5 +1,6 @@
 import React from 'react';
 import SyntaxPane from './SyntaxPane';
+import PropTypes from 'prop-types';
 
 /**
  * A content pane containing text, links, or code
@@ -13,7 +14,8 @@ class ContentPane extends React.Component {
   }
 
   render() {
-    const content = this.props.content.map((x, ind) => {
+    let { content } = this.props;
+    const widgets = content.map((x, ind) => {
       if (x === "") {
         return ("");
       }
@@ -46,11 +48,16 @@ class ContentPane extends React.Component {
     return (
       <div class="p-1 mb-0 w-full lg:w-1/3 lg:h-80">
         <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded lg:overflow-y-auto">
-          {content}
+          {widgets}
         </div>
       </div>
     );
   }
+}
+
+ContentPane.propTypes = {
+  /** text, links, and code content for the content pane to display */
+  content: PropTypes.string
 }
 
 export default ContentPane;
