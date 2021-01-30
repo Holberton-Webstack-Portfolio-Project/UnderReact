@@ -57,7 +57,7 @@ class ContentPane extends React.Component {
 
 ContentPane.propTypes = {
   /** text, links, and code content for the content pane to display */
-  content: PropTypes.string
+  content: PropTypes.array
 }
 
 export default ContentPane;
