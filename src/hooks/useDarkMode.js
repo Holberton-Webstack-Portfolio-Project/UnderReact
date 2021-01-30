@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+/**
+ * provides a react hook to set the dark mode state from within a component
+ */
 export default function useDarkMode() {
     const [theme, setTheme] = useState('dark');
     const colorTheme = theme === 'dark' ? 'light' : 'dark'
