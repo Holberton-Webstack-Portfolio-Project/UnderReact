@@ -53,7 +53,12 @@ $ npm build
 ## Authors
 
 * William Dyrland-Marquis [@maybe-william](https://github.com/maybe-william) | [LinkedIn](https://www.linkedin.com/in/william-dyrland-marquis/)
+
+Backend Engineering & Architecture - Melty Design & SVG Animation - Dropdown Functionality & Content Pane
+
 * Gareth Brickman [@garethbrickman](https://github.com/garethbrickman) | [LinkedIn](https://www.linkedin.com/in/br1ck/)
+
+Frontend Design & Syntax Highlighter - Dark Mode Toggle & Style Implementation - Build Optimization & AWS Deployment
 
 ## Licensing
 
